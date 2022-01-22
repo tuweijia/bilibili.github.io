@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        .frame{
+            height: 667px;
+            width: 375px;
+            background: white;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        header{
+            height: 44px;
+            background: white;
+            display: flex;
+        }
+        header img{
+            height: 100%;
+        }
+        header input{
+            height: 30px;
+            width: 88px;
+            margin: auto;
+            border: 0;
+        }
+        header div{
+            flex: 1;
+            height: 100%;
+            display: flex;
+        }
+        header div span{
+            height: 25px;
+            width: 73px;
+            line-height: 25px;
+            background: #fb7299;
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            font-size: 12px;
+            margin: auto;
+            box-sizing: border-box;
+            border: 1px solid #fdc6d5;
+            border-radius: 5px;
+            display: block;
+            flex-shrink: 0;
+        }
+        section video{
+            width: 375px;
+            height: 213px;
+        }
+        section .downloadBottom{
+            height: 55px;
+        }
+        section .downloadBottom div{
+            height: 36px;
+            width: 352px;
+            background: #fb7299;
+            font-size: 12px;
+            line-height: 36px;
+            text-align: center;
+            color: white;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 1px solid #fdc6d5;
+            border-radius: 18px 18px 18px 18px;
+        }
+        section .theme{
+            height: 72px;
+            width: 352px;
+            margin-left: 12px;
+            margin-right: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+        .title{
+            height: 29px;
+            width: 100%;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .title p{
+            width: 307px;
+            line-height: 29px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .title img{
+            height: 29px;
+            width: 21px;
+        }
+        .info{
+            flex: 1;
+            display: flex;
+            width: 352px;
+            line-height: 43px;
+        }
+        .logo{
+            display: flex;
+        }
+        .logo img{
+            width: 21px;
+            height: 23px;
+            margin: auto;
+        }
+        .logo p{
+            font-size: 12px;
+            line-height: 43px;
+            text-align: center;
+        }
+        .viewnum{
+            width: 107px;
+            line-height: 43px;
+            text-align: right;
+            font-size: 12px;
+            color: #a1a1a1;
+        }
+        .else{
+            width: 49px;
+            display: flex;
+            padding-left: 21px;
+        }
+        .else img{
+            width: 19px;
+            height: 19px;
+            margin: auto auto;
+        }
+        .else p{
+            flex: 1;
+            font-size: 10px;
+            color: #a1a1a1;
+            text-align: right;
+            line-height: 43px;
+        }
+        section .list{
+            height: 71px;
+            background: white;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            box-sizing: border-box;
+        }
+        .list ul{
+            display: flex;
+            overflow: auto;
+            justify-content: flex-start;
+        }
+        .list ul li{
+            height: 47px;
+            width: 132px;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            margin: 12px;
+            padding: 4px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        .list ul li:hover{
+            color: #fb7299;
+            border-color: #fb7299;
+        }
+        footer{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .recommend{
+            height: 32px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .recommend p{
+            flex: 1;
+            text-align: center;
+            height: 26px;
+            width: 70px;
+            font-size: 14px;
+            line-height: 26px;
+        }
+        .recommend p:hover{
+            color: #fb7299;
+            border-bottom: 2px solid #fb7299;
+            box-sizing: border-box;
+        }
+        footer ul{
+            flex: 1;
+            display: flex;
+            height:174px;
+            width: 100%;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: auto;
+        }
+        footer ul li{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 135px;
+            background: white;
+        }
+        footer ul li:nth-child(2n-1){
+            margin: 8px calc(29px/6) 0 calc(29px/3);
+        }
+        footer ul li:nth-child(2n){
+            margin: 8px calc(29px/3) 0 calc(29px/6);
+        }
+        footer ul li video{
+            height: 98px;
+            width: 172px;
+            background: blue;
+            border-radius: 4px;
+        }
+        footer ul li p{
+            width: 172px;
+            height: 100%;
+            background: white;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class='frame'>
+        <header>
+            <img src="bilibili.png" alt="">
+            <input type="text">
+            <img src="fangdajing.png" alt="">
+            <img src="denglu.png" alt="">
+            <div><span>下载App</span></div>
+        </header>
+        <section>
+            <video src="video.mp4" controls></video>
+            <div class='downloadBottom'><div>打开App，流畅又清晰</div></div>
+            <div class='theme'>
+                <div class='title'>
+                    <p>千锋HTML5前段开发教程1000集完全基础训练营</p>
+                    <img src="jiantou.png" alt="">
+                </div>
+                <div class='info'>
+                    <div class='logo'>
+                        <img src="logo.png" alt="">
+                        <p class='name'>千锋前端学习营</p>
+                    </div>
+                    <p class='viewnum'>108.3万观看</p>
+                    <div class='else'>
+                        <img src="zan.png" alt="">
+                        <p>2.1万</p>
+                    </div>
+                    <div class='else'>
+                        <img src="star.png" alt="">
+                        <p>4万</p>
+                    </div>
+                </div>
+            </div>
+            <div class='list'>
+                <ul>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                    <li>1-移动端布局</li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class='recommend'>
+                <p>相关推荐</p>
+                <p>评论（2086）</p>
+            </div>
+            <ul>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+                <li>
+                    <video src="video.mp4" controls></video>
+                    <p>美丽的花朵</p>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
